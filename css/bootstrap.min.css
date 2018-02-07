@@ -3133,6 +3133,13 @@ tbody.collapse.show {
     border-top: 1px solid #f7f7f9
 }
 
+.divider {
+    height: 1;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #000000
+}
+
 .dropdown-item {
     display: block;
     width: 100%;
