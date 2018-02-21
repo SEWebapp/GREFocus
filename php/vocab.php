@@ -23,7 +23,7 @@ $fp = fopen('vocab_json_data.json', 'w');
 fwrite($fp, json_encode($data['vocab']));
 fclose($fp);
 
-@header('Location:http://localhost/GREFocus/vocab.html');
+@header('Location:/GREFocus/vocab.html');
 
 
 
