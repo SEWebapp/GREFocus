@@ -19,11 +19,11 @@ while($row = mysqli_fetch_array($query)){
 
 }
 
-$fp = fopen('vocab_json_data.json', 'w');
+$fp = fopen('../json/vocab_json_data.json', 'w');
 fwrite($fp, json_encode($data['vocab']));
 fclose($fp);
 
-@header('Location:/GREFocus/vocab.html');
+@header('Location:/GREFocus/vocabpage.php');
 
 
 

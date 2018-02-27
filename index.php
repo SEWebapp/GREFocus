@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -25,9 +31,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="DefaultNavBar">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home
-            <span class="sr-only">(current)</span>
-          </a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="NavBarDropDown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,9 +57,21 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login/Register</a>
-        </li>
+          <?php
+
+            if(isset($_SESSION['u_id'])){
+              echo '<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="NavBarDropDown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$_SESSION['u_fname'].' '.$_SESSION['u_lname'].'</a>
+              <div class="dropdown-menu" aria-labelledby="NavBarDropDown1">
+                <a class="dropdown-item" href="/GREFocus/php/logout.php">Logout</a>
+              </div>
+            </li>' ;
+              //echo $_SESSION['u_fname'];
+            }else{
+              echo '<a class="nav-link" href="login_register.php">Login/Register</a>';
+            }
+
+          ?>
       </ul>
     </div>
   </nav>
