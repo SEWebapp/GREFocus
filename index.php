@@ -22,7 +22,7 @@ session_start();
 
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">GREFocus</a>
+    <a class="navbar-brand" href="index.php">GREFocus</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#DefaultNavBar" aria-controls="DefaultNavBar"
       aria-expanded="false" aria-label="Toggle navigation" style="">
       <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@ session_start();
       potential for higher academic pursuits, advanced studies and research. This standardized test compares the performance
       of a student with millions of others who have written this exam.</p>
     <p class="lead">
-      <a class="btn btn-primary btn-md" href="#" role="button">Learn more</a>
+      <a class="btn btn-primary btn-md" href="greinfo.php" role="button">Learn more</a>
     </p>
   </div>
 
