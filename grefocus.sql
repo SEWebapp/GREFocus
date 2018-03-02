@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2018 at 12:48 PM
+-- Generation Time: Mar 02, 2018 at 06:42 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `grefocus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first` varchar(256) NOT NULL,
+  `user_last` varchar(256) NOT NULL,
+  `user_email` varchar(256) NOT NULL,
+  `user_uid` varchar(256) NOT NULL,
+  `user_pwd` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_uid`, `user_pwd`) VALUES
+(1, 'Yash', 'Mahajan', 'abc@gmail.com', 'Zero', '$2y$10$Ifrmdga2IeB.YP5mpEpKlO.3hMv5watVLZufj9IpktPIvNPXzpZx2');
 
 -- --------------------------------------------------------
 
@@ -51,6 +73,12 @@ INSERT INTO `vocab` (`id`, `word`, `synonym`, `antonym`, `sentence`) VALUES
 --
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- Indexes for table `vocab`
 --
 ALTER TABLE `vocab`
@@ -59,6 +87,12 @@ ALTER TABLE `vocab`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `vocab`
