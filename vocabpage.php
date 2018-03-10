@@ -1,5 +1,5 @@
 <?php
-
+include 'php/config.php';
 session_start();
 
 ?>
@@ -71,7 +71,7 @@ session_start();
           <a class="nav-link" href="#">Top Universities</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
           <?php
 

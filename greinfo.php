@@ -1,5 +1,5 @@
 <?php
-
+include 'php/config.php';
 session_start();
 
 ?>
@@ -55,7 +55,7 @@ session_start();
           <a class="nav-link" href="#">Top Universities</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
           <?php
 
@@ -76,7 +76,7 @@ if (isset($_SESSION['u_id'])) {
     </div>
   </nav>
 
-<div class="jumbotron jumbotron-fluid col-11 mx-auto">
+<div class="jumbotron jumbotron-fluid col-md-11 col-sm-10 mx-auto">
     <div class="container">
         <h1 class="display-3">GRE General Test</h1>
         <div class="divider"></div>

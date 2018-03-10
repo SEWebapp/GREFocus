@@ -2,8 +2,19 @@
 include 'php/config.php';
 session_start();
 
-?>
 
+if(!isset($_SESSION['u_id'])){
+  header("Location: login_register.php");
+  ecit();
+}
+
+?>
+<?php
+  $query1 = "SELECT * FROM vt1questions";
+
+  $result1 = mysqli_query($con, $query1);
+  $row = mysqli_num_rows($result1);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -30,7 +41,7 @@ session_start();
 
     <div class="collapse navbar-collapse justify-content-end" id="DefaultNavBar">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item dropdown">
@@ -42,12 +53,12 @@ session_start();
             <a class="dropdown-item" href="#">Quant</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="NavBarDropDown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Practice Test
           </a>
           <div class="dropdown-menu" aria-labelledby="NavBarDropDown2">
-            <a class="dropdown-item" href="/GREFocus/verbaltestpage.php">Verbal</a>
+            <a class="dropdown-item" href="#">Verbal</a>
             <a class="dropdown-item" href="#">Quant</a>
           </div>
         </li>
@@ -76,55 +87,23 @@ session_start();
     </div>
   </nav>
 
-  <!-- Jumbotron -->
-  <div class="jumbotron">
-    <h1 class="display-3">GRE</h1>
-    <h1 class="display-5">Graduate Record Examination</h1>
-    <p class="lead">The GRE is a testing system that most international universities (including USA and Canada) adopt to assess a student's
-      potential for higher academic pursuits, advanced studies and research. This standardized test compares the performance
-      of a student with millions of others who have written this exam.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-md" href="greinfo.php" role="button">Learn more</a>
-    </p>
+
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <h1>Verbal Test 1</h1>
+          <hr class="my-2">
+          <h4>Number Of Questions: <?php echo $row; ?> MCQ</h4>
+          <h4>Time: 30 min</h4>
+          <p class="lead">
+              <a class="btn btn-primary " href="vt1/vt1.php?n=1" role="button">Start Test</a>
+          </p>
+      </div>
   </div>
 
-  <h3 class="text-center mb-3">Site Features</h3>
 
-  <!-- Card Grid -->
-  <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <div class="card border-primary mb-3">
-        <div class="card-body text-primary">
-          <h4 class="card-title">Vocabulary Builder</h4>
-          <div class="divider"></div><br>
-          <img src="images/vocabulary.png" alt="VocabularyIcon" class="img-fluid mx-auto d-block"><br>
-          <p class="card-text">A collection of the most frequently repeating words in the GRE general test.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <div class="card border-primary mb-3">
-        <div class="card-body text-primary">
-          <h4 class="card-title">Formulae List</h4>
-          <div class="divider"></div><br>
-          <img src="images/formula.png" alt="VocabularyIcon" class="img-fluid mx-auto d-block"><br>
-          <p class="card-text">A collection of the most widely and repeatedly used formulae in the GRE general test.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <div class="card border-primary mb-3">
-        <div class="card-body text-primary">
-          <h4 class="card-title">GRE Practice Tests</h4>
-          <div class="divider"></div><br>
-          <img src="images/test.png" alt="VocabularyIcon" class="img-fluid mx-auto d-block"><br>
-          <p class="card-text">A collection of real GRE question to practice and get familiar with GRE test layout.</p>
-        </div>
-      </div>
-    </div>
-</div>
-</div>
+
+
+
 
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>

@@ -1,4 +1,5 @@
 <?php
+include 'php/config.php';
 session_start();
 ?>
 
@@ -20,7 +21,7 @@ session_start();
 
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">GREFocus</a>
+    <a class="navbar-brand" href="index.php">GREFocus</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#DefaultNavBar" aria-controls="DefaultNavBar"
       aria-expanded="false" aria-label="Toggle navigation" style="">
       <span class="navbar-toggler-icon"></span>
@@ -29,7 +30,7 @@ session_start();
     <div class="collapse navbar-collapse justify-content-end" id="DefaultNavBar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home
+          <a class="nav-link" href="index.php">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -58,7 +59,7 @@ session_start();
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Login/Register</a>
+          <a class="nav-link" href="about.php">Login/Register</a>
         </li>
       </ul>
     </div>
