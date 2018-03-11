@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2018 at 11:00 AM
+-- Generation Time: Mar 11, 2018 at 04:47 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -42,6 +42,39 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`id`, `name`, `email`, `subject`, `message`) VALUES
 (1, 'Yash Mahajan', 'ymahajan67@gmail.com', 'Website', 'Best');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `universities`
+--
+
+CREATE TABLE `universities` (
+  `rank` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `verbal` int(11) NOT NULL,
+  `quant` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `website` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `universities`
+--
+
+INSERT INTO `universities` (`rank`, `name`, `verbal`, `quant`, `image`, `website`) VALUES
+(1, 'Carnegie Mellon University', 159, 161, 'images/uni/1.jpg', 'https://www.scs.cmu.edu/'),
+(2, 'Massachusetts Institute of Technology', 157, 162, 'images/uni/2.jpg', 'https://www.eecs.mit.edu/'),
+(3, 'Stanford University', 158, 163, 'images/uni/3.jpg', 'https://cs.stanford.edu/'),
+(4, 'University of California Berkeley', 155, 161, 'images/uni/4.jpg', 'https://eecs.berkeley.edu/'),
+(5, 'University of Illinois Urbana Champaign', 155, 163, 'images/uni/5.png', 'https://cs.illinois.edu/'),
+(6, 'Cornell University', 160, 162, 'images/uni/6.jpg', 'https://www.cs.cornell.edu/'),
+(7, 'University of Washington', 156, 159, 'images/uni/7.jpg', 'https://www.cs.washington.edu/'),
+(8, 'Princeton University', 158, 163, 'images/uni/8.jpg', 'https://www.cs.princeton.edu/'),
+(9, 'Georgia Institute of Technology ', 155, 161, 'images/uni/9.jpg', 'https://www.cc.gatech.edu/future/masters/mscs'),
+(10, 'University of Texas Austin', 155, 160, 'images/uni/10.jpg', 'https://www.cs.utexas.edu/graduate-program/masters-program'),
+(11, 'California Institute of Technology', 156, 161, 'images/uni/11.jpg', 'http://www.cms.caltech.edu/'),
+(12, 'University of Wisconsin Madison', 157, 163, 'images/uni/12.jpg', 'https://www.cs.wisc.edu/academics/graduate-programs');
 
 -- --------------------------------------------------------
 
@@ -165,6 +198,12 @@ ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `universities`
+--
+ALTER TABLE `universities`
+  ADD PRIMARY KEY (`rank`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -196,7 +235,7 @@ ALTER TABLE `vt1questions`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
