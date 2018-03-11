@@ -57,6 +57,9 @@ session_start();
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="admin_login.php">Admin Login</a>
+         </li>
           <?php
 
             if(isset($_SESSION['u_id'])){
