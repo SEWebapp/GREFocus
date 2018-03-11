@@ -52,7 +52,7 @@ session_start();
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Top Universities</a>
+          <a class="nav-link" href="topuni.php">Top Universities</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>

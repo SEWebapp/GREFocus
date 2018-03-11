@@ -53,13 +53,13 @@ session_start();
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Top Universities</a>
+          <a class="nav-link" href="topuni.php">Top Universities</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="about.php">Login/Register</a>
+          <a class="nav-link" href="login_register.php">Login/Register</a>
         </li>
       </ul>
     </div>
