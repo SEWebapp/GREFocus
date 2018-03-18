@@ -32,7 +32,6 @@ $query1 = "SELECT * FROM vt1questions";
 
   </nav>
 
-
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
           <br>
@@ -43,12 +42,9 @@ $query1 = "SELECT * FROM vt1questions";
       </div>
   </div>
 
-
 <?php
  unset($_SESSION['score'])
 ?>
-
-
 
   <script src="../js/jquery-3.2.1.slim.min.js"></script>
   <script src="../js/popper.min.js"></script>

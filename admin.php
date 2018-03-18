@@ -60,3 +60,6 @@ session_start();
           </fieldset>
         </form>
        </div>
+
+</body>
+</html>
