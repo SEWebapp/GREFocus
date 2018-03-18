@@ -32,8 +32,6 @@ if(isset($_POST['submit'])){
                     exit();
                     
                 }
-
-            
         }
 
     }else {

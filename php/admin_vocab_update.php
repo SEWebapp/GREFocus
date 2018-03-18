@@ -15,7 +15,6 @@ if(isset($_POST['submit'])){
         exit();
     } else {
            
-
                     //Insert the user into db
                     $sql = "INSERT INTO vocab ( word, synonym, antonym, sentence) VALUES ('$word','$synonym', '$antonym', '$sentence');";
                     mysqli_query($con, $sql);
@@ -23,13 +22,11 @@ if(isset($_POST['submit'])){
                     
                 }
 
-            
         }
 
     else {
     header("Location: admin_vocab.php");
     exit();
 }
-
 
 ?>
