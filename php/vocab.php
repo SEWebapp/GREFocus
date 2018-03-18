@@ -25,6 +25,4 @@ fclose($fp);
 
 @header('Location:/GREFocus/vocabpage.php');
 
-
-
 ?>

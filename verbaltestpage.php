@@ -87,7 +87,6 @@ if(!isset($_SESSION['u_id'])){
     </div>
   </nav>
 
-
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
           <h1>Verbal Test 1</h1>
@@ -99,11 +98,6 @@ if(!isset($_SESSION['u_id'])){
           </p>
       </div>
   </div>
-
-
-
-
-
 
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
