@@ -132,9 +132,3 @@ session_start();
 </body>
 
 </html>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> a99190cd522eef183286a8b0b5fc25134c93f50a
