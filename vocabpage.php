@@ -12,12 +12,19 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vocabulary Builder</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap-table.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap-table.min.js"></script>
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -28,7 +35,7 @@ session_start();
         url: 'json/vocab_json_data.json',
         pagination: true,
         pageSize: 10,
-        search: true 
+         
       });
     });
 
@@ -98,15 +105,25 @@ session_start();
     <li class="breadcrumb-item">Vocabulary</li>
   </ol>
 
-  <div class="table-responsive">
-    <table class="table borderless table-hover" id="table" style="color:black;font-weight:bold;font-size:15px">
+  <center><h1 class="display-5">High Frequency Vocabulary WOrds</h1></center>
+
+  <div class="table-responsive p-2 " >
+  <div id="toolbar"></div>
+    <table class="table dt-responsive borderless table-hover" id="table" style="color:black;font-weight:bold;font-size:15px" data-show-refresh="true"
+        data-toolbar="#toolbar"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-columns="true"
+       data-show-export="true"
+
+    >
       <thead class="thead-dark">
         <tr>
-          <th data-field="id" scope="col">#</th>
-          <th data-field="word" scope="col">Word</th>
-          <th data-field="synonym" scope="col">Synonym</th>
-          <th data-field="antonym" scope="col">Antonym</th>
-          <th data-field="sentence" scope="col">Sentence</th>
+          <th data-field="id" scope="col" data-sortable="true">#</th>
+          <th data-field="word" scope="col" data-sortable="true">Word</th>
+          <th data-field="synonym" scope="col" data-sortable="true">Synonym</th>
+          <th data-field="antonym" scope="col" data-sortable="true">Antonym</th>
+          <th data-field="sentence" scope="col" data-sortable="true">Sentence</th>
         </tr>
       </thead>
     </table>
