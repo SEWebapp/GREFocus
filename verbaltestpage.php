@@ -87,6 +87,12 @@ if(!isset($_SESSION['u_id'])){
     </div>
   </nav>
 
+  <ol class="breadcrumb m-2">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item">Practice Test</li>
+    <li class="breadcrumb-item">Verbal Test</li>
+  </ol>
+
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
           <h1>Verbal Test 1</h1>

@@ -63,7 +63,7 @@ session_start();
             Practice Test
           </a>
           <div class="dropdown-menu" aria-labelledby="NavBarDropDown2">
-            <a class="dropdown-item" href="#">Verbal</a>
+            <a class="dropdown-item" href="verbaltestpage.php">Verbal</a>
             <a class="dropdown-item" href="#">Quant</a>
           </div>
         </li>
@@ -92,6 +92,12 @@ session_start();
     </div>
   </nav>
  
+  <ol class="breadcrumb m-2">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item">Study Material</li>
+    <li class="breadcrumb-item">Vocabulary</li>
+  </ol>
+
   <div class="table-responsive">
     <table class="table borderless table-hover" id="table" style="color:black;font-weight:bold;font-size:15px">
       <thead class="thead-dark">

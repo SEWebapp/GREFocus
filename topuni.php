@@ -80,7 +80,11 @@ $result = mysqli_query($con , $query);
     </div>
   </nav>
 
-  <br><br>
+  <ol class="breadcrumb m-2">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item">Top Universities</li>
+  </ol>
+
   <center><h1 class="display-5">Top Universities for Masters in CS</h1></center><br>
   <!-- Card Grid -->
   <div class="container-fluid">

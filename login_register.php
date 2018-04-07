@@ -65,6 +65,11 @@ session_start();
     </div>
   </nav>
 
+  <ol class="breadcrumb m-2">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item">Login/Register</li>
+  </ol>
+
   <!-- Login and Register -->
   <div class="m-4 border border-primary">
     <div class="container-fluid">
